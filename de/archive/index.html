@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sihlfeld All Star Games</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="too-small-display" class="too-small-display">
+        <div style="margin-top: calc(50vh - 256px);">
+            <img src="/resources/display-too-small.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        </div>
+        <div>
+            <p style="text-align: center; font-family: 'Roboto'; font-size: large;">Ihr Display ist viel zu klein um diese Website anzuzeigen. Bitte versuchen sie mit ein Gerät mit grösserem Display.</p>
+        </div>
+    </div>
+    <div class="backnav">
+        <a></a> <!-- White part behind the topbar so the title disappears -->
+    </div>
+    <div id="navtitle" class="titlenav visible">
+        <p style="text-align: right;">Sihlfeld ALL STAR GAMES</p>
+    </div>
+    <div class="topnav">
+        <a href="/de/#" id="scrollTop" title="Zurück zur Hauptseite">Home</a>
+        <a href="/de/#times" id="scrollTimes" title="Zu den Zeiten">Zeiten</a>
+        <a href="/de/#rules" id="scrollRules" title="Zu den Regeln">Regeln</a>
+        <a href="/de/archive/" title="Zum Archiv" class="active">Archiv</a>
+        <a href="/de/people/" title="Zu den Personen">Personen</a>
+        <a href="/de/teams/" title="Zu den Gruppen">Gruppen</a>
+        <a href="/en/" title="Zur Englischen Seite">English</a>
+    </div>
+    <div id="archive">
+        <br><br><br><div style="display: block; height: 0; width: 50%; margin: 4.7px 0; border-top: 1px solid transparent;"></div> <!-- Spacing for top of section -->
+        <div class="section">
+            <p class="smalltitle">Archiv</p>
+        </div>
+    </div>
+    <script>
+        function checkOverlay() {
+            const overlay = document.getElementById('overlay');
+            if (window.innerWidth <= 969) { // Adjust the width threshold as needed
+                document.body.classList.add('no-scroll');
+                overlay.classList.add('active');
+            } else {
+                document.body.classList.remove('no-scroll');
+                overlay.classList.remove('active');
+            }
+        }
+        window.addEventListener('resize', checkOverlay);
+        window.addEventListener('load', checkOverlay);
+    </script>
+</body>
+</html>

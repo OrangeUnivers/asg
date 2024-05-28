@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sihlfeld All Star Games</title>
+
+    <script>
+        function redirectToLocalSite(country) {
+            const germanCountries = ["DE", "AT", "CH"];
+    
+            if (germanCountries.includes(country)) {
+                window.location.href = "/de/";
+            } else {
+                window.location.href = "/en/";
+            }
+        }
+        
+        fetch('https://ipinfo.io/json?token=4e45ae7ecd53cd')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("IP Info data:", data); // Log the response data
+                const country = data.country;
+                redirectToLocalSite(country);
+            })
+            .catch(error => {
+                console.error("Error fetching the IP information: ", error);
+                window.location.href = "/de/";
+            });
+    </script>
+</head>
+</html>
+<!-- 4e45ae7ecd53cd -->

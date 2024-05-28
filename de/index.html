@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sihlfeld All Star Games</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- CSS File -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- Font Roboto -->
+    <script> // Live Server script for reloading
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</head>
+<body>
+    <div id="too-small-display" class="too-small-display"> <!-- Too small screen error -->
+        <div style="margin-top: calc(50vh - 256px);">
+            <img src="/resources/display-too-small.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        </div>
+        <div>
+            <p style="text-align: center; font-family: 'Roboto'; font-size: 30px; margin: 15px;">Ihr Display ist viel zu klein um diese Website anzuzeigen. Bitte versuchen sie mit ein Gerät mit grösserem Display.</p>
+        </div>
+    </div>
+    <div class="backnav">
+        <a></a> <!-- White part behind the topbar so the title disappears -->
+    </div>
+    <div id="scrollPosition" class="devItems" style="float: right; left: calc(100% - 170px);">Scroll-Position: 0</div>
+    <span id="width-display" class="devItems" style="float: left;"></span>
+    <div class="title">
+        <br><br><br> <!-- Spacing for title -->
+        <h2 class="subtitle">Sihlfeld</h2>
+        <h1 class="main">ALL STAR GAMES</h1>
+        <p class="text" style="font-size: 30px; line-height: 0px">Willkommen!</p>
+        <p class="text">Schliessen Sie sich uns bei den ALL STAR GAMES an, um das coolste Event im Sihlfeld zu erleben.<br>Bei diesem Event wirst du sehen, wie die sechsten Klassen gegen die Lehrer<br>um den Sieg in zwei Sportarten kämpfen!</p>
+        <br>
+    </div>
+    <div id="navtitle" class="titlenav">
+        <p style="text-align: right;">Sihlfeld ALL STAR GAMES</p>
+    </div>
+    <div class="topnav">
+        <a href="#" id="scrollTop" title="Zur Hauptseite">Home</a>
+        <a href="#times" id="scrollTimes" title="Zu den Zeiten">Zeiten</a>
+        <a href="#rules" id="scrollRules" title="Zu den Regeln">Regeln</a>
+        <a href="archive/" title="Zum Archiv">Archiv</a>
+        <a href="people/" title="Zu den Personen">Personen</a>
+        <a href="teams/" title="Zu den Gruppen">Gruppen</a>
+        <a href="/en/" title="Zur Englischen Seite">English</a>
+    </div>
+    <div style="margin-bottom: 395px;" id="title_spacing"></div> <!-- Spacing for title -->
+    <div id="times">
+        <br><br><br><br> <!-- Spacing for top of section -->
+        <div class="section">
+            <p class="smalltitle">Zeiten</p>
+            <p class="text">Jedoch das Event schon vergangen ist wurde dass Event am</p>
+            <p class="text" style="font-size: 25px; line-height: 5px">Donnerstag 13 Juli 2023</p>
+            <p class="text" style="font-size: 25px; line-height: 5px">Um <b>14:00</b> wird <b>Volleyball</b> gespielt</p>
+            <p class="text" style="font-size: 25px; line-height: 5px">Um <b>14:30</b> wird <b>Fussball</b> gespielt</p>
+            <p class="text">Obwohl das Event schon war kann man Fotos und Livestreams im <a href="archive/" style="color: #cbe1fd" title="Zum Archiv">Archiv</a> sehen.</p>
+        </div>
+    </div>
+    <div id="rules">
+        <br><br><br><br> <!-- Spacing for top of section -->
+        <div class="section">
+            <p class="smalltitle">Regeln</p>
+            <p class="text" style="font-size: 25px; line-height: 5px; font-weight: 500;">Volleyball</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">1&rpar;</b> Es wird 6 vs 6 gespielt.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">2&rpar;</b> Bei einem Anspielfehler wird wiederholt.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">3&rpar;</b> Es zählen nur die Punkte bei einegenem Aufschlag.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">4&rpar;</b> Beim Punkt für das andere Team wird rotiert.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">5&rpar;</b> Ein Satz gewinnt man mit 11 Punkten.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">6&rpar;</b> Gespielt wird auf zwei Gewinnsätze.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">7&rpar;</b> Der/Die Schiri hat immer Recht</p>
+            <p class="text">Das Volleyballspielfeld ist <a href="field/volleyball/" style="color: #cbe1fd">hier</a> vorhanden.</p>
+            <br>
+            <p class="text" style="font-size: 25px; line-height: 5px; font-weight: 500;">Fussball</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">1&rpar;</b> Wir spielen 5 gegen 5 (plus Torwart/Torhüterin).</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">2&rpar;</b> Nach Out - Einwurf und Eckball oder Abstoss.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">3&rpar;</b> Falls jemand eine gelbe Karte kriegt wird er/sie 2 Minuten raus.<br>Das Team spielt zu sechst weiter.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">4&rpar;</b> Falls jemand eine rote Karte kriegt muss er/sie für das ganze Spiel raus.<br>Das Team spielt zu sechst weiter.</p>
+            <p class="text" style="text-align: left; margin-left: 20%;"><b style="font-weight: 450;">5&rpar;</b> Der Schiedsrichter hat immer Recht!</p>
+            <p class="text">Das Fussballspielfeld ist <a href="field/football/" style="color: #cbe1fd">hier</a> vorhanden.</p>
+        </div>
+        <p class="text" style="text-align: left;"></p>
+    </div>
+    <div style="margin-bottom: 150.5px;"></div> <!-- Spacing for aesthetical reasons -->
+    <script>
+        // Scroll to the top of the page when the window is loaded
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+
+        // Show where you are in topnav and show small title
+        window.addEventListener('scroll', function() {
+            var scrollElement = document.getElementById('navtitle');
+            var scrollElementTop = document.getElementById('scrollTop');
+            var scrollElementTimes = document.getElementById('scrollTimes');
+            var scrollElementRules = document.getElementById('scrollRules');
+            var scrollPosition = window.scrollY;
+            
+            if (scrollPosition > 340.1) {
+                scrollElement.classList.add('visible');
+            } else {
+                scrollElement.classList.remove('visible');
+            }
+            if (scrollPosition < 394.5) {
+                scrollElementTop.classList.add('active');
+            } else {
+                scrollElementTop.classList.remove('active');
+            }
+            if (scrollPosition > 394.6 && scrollPosition < 755.5) {
+                scrollElementTimes.classList.add('active');
+            } else {
+                scrollElementTimes.classList.remove('active');
+            }
+            if (scrollPosition > 755.6) {
+                scrollElementRules.classList.add('active');
+            } else {
+                scrollElementRules.classList.remove('active');
+            }
+        });
+
+        // Smooth transitions
+        document.getElementById('scrollTop').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.getElementById('scrollTimes').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('times').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.getElementById('scrollRules').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('rules').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // // DevTools
+        // Scroll Position
+        function updateScrollPosition() {
+            var scrollPosition = window.scrollY;
+            document.getElementById('scrollPosition').textContent = 'Scroll-Position: ' + scrollPosition;
+        }
+
+        // Width Counter
+        function updateWidthDisplay() {
+            const widthDisplay = document.getElementById('width-display');
+            widthDisplay.textContent = 'Width: ' + window.innerWidth + 'px';
+        }
+        updateWidthDisplay();
+        window.addEventListener('resize', updateWidthDisplay);
+
+        // Activate position in topbar on load
+        window.addEventListener('scroll', updateScrollPosition);
+        function addActiveClass() {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition == 0) {
+                var scrollElementTop = document.getElementById('scrollTop');
+                scrollElementTop.classList.add('active');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            addActiveClass();
+        });
+
+        // Screen size error
+        function checkOverlay() {
+            const overlay = document.getElementById('overlay');
+            if (window.innerWidth <= 969) {
+                document.body.classList.add('no-scroll');
+                overlay.classList.add('active');
+            } else {
+                document.body.classList.remove('no-scroll');
+                overlay.classList.remove('active');
+            }
+        }
+        window.addEventListener('resize', checkOverlay);
+        window.addEventListener('load', checkOverlay);
+
+        // Size control
+        window.addEventListener('scroll', function() {
+            var titleSpace = document.getElementById('title_spacing');
+            var windowWidth = window.innerWidth;
+            
+            if (windowWidth > 969) {
+                titleSpace.style.marginBottom = "1000px !important";
+            }
+        });
+    </script>
+</body>
+</html>
